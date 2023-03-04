@@ -6,7 +6,14 @@ def Armstrong(nbr):
         sommeCubique += d ** 3
         tmp //= 10
     if nbr == sommeCubique:
-        print(nbr,"est un nombre Armstrong")
+        return True
     else:
-        print(nbr,"n'est pas un nombre Armstrong")
-Armstrong(153)
+        return False
+
+a = []
+for x in range(10000):
+    if Armstrong(x):
+        a.append(x)
+
+print(a)
+
